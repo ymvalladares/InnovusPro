@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/innovuspro/static/css/main.f855e6bc.css",
+    "main.js": "/innovuspro/static/js/main.915a4cea.js",
+    "static/js/453.ea512af9.chunk.js": "/innovuspro/static/js/453.ea512af9.chunk.js",
+    "static/media/fondo.jpg": "/innovuspro/static/media/fondo.a24a0fbf3ffad8ee25ce.jpg",
+    "index.html": "/innovuspro/index.html",
+    "main.f855e6bc.css.map": "/innovuspro/static/css/main.f855e6bc.css.map",
+    "main.915a4cea.js.map": "/innovuspro/static/js/main.915a4cea.js.map",
+    "453.ea512af9.chunk.js.map": "/innovuspro/static/js/453.ea512af9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.915a4cea.js"
+  ]
+}
