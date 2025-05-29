@@ -13,13 +13,14 @@ import {
   ListItemButton,
   Box,
   Link,
+  Divider,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import HomeIcon from "@mui/icons-material/Home";
 import BuildIcon from "@mui/icons-material/Build";
 import ContactPhoneIcon from "@mui/icons-material/ContactPhone";
 import InfoIcon from "@mui/icons-material/Info";
-import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
+import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
 //-------Components---------
@@ -30,6 +31,21 @@ import InformationSmall from "./components/InformationSmall";
 import Reviews from "./components/Reviews";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+
+import { FloatingWhatsApp } from "react-floating-whatsapp";
+import { Fab } from "@mui/material";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import { keyframes } from "@emotion/react";
+import CoffeeIcon from "@mui/icons-material/Coffee";
+
+const jump = keyframes`
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+`;
 
 const navItems = [
   { name: "Home", id: "header", icon: <HomeIcon /> },
@@ -42,9 +58,7 @@ const MainSitePage = () => {
   const matches = useMediaQuery("(min-width:500px)");
 
   const handleScroll = (item) => {
-    console.log(item);
     const el = document.getElementById(`${item}`);
-    console.log(el);
     if (el) el.scrollIntoView({ behavior: "smooth" });
   };
 
@@ -124,21 +138,21 @@ const MainSitePage = () => {
             <Button
               sx={{
                 marginRight: matches ? "50px" : "0px",
-                marginLeft: matches ? "80px" : "210px",
+                marginLeft: matches ? "80px" : "170px",
+                color: "white",
                 fontWeight: "bold",
                 textTransform: "none",
+                backgroundColor: "#5B76CD",
                 borderRadius: "10px",
+                boxShadow: "0 4px 24px 0 #0004",
                 paddingLeft: "20px",
                 paddingRight: "20px",
-                color: "white",
-                border: "1px solid #FC5A22",
-                backgroundColor: "#FC5A22",
 
                 ":hover": {
-                  color: "#FC5A22",
+                  color: "#5B76CD",
                   backgroundColor: "white",
                   textDecoration: "underline",
-                  border: "1px solid #FC5A22",
+                  border: "1px solid #5B76CD",
                   paddingLeft: "20px",
                   paddingRight: "20px",
                   fontWeight: "bold",
@@ -147,25 +161,62 @@ const MainSitePage = () => {
               }}
               variant="outlined"
             >
-              Appoiments
-              <ArrowRightAltIcon />
+              <LocalPhoneIcon sx={{ mr: 2 }} />
+              <Link color="inherit" href="tel:+13054970754">
+                +1 305 497 0754
+              </Link>
             </Button>
           </Toolbar>
         </AppBar>
         ;{/* Drawer */}
         <Drawer anchor="left" open={drawerOpen} onClose={toggleDrawer(false)}>
-          <List sx={{ width: 250 }}>
-            {navItems.map((item) => (
-              <ListItem
-                button
-                key={item.id}
-                onClick={() => handleScroll(item.id)}
-              >
-                <ListItemIcon>{item.icon}</ListItemIcon>
-                <ListItemText primary={item.name} />
-              </ListItem>
-            ))}
-          </List>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              height: "100%",
+              width: 250,
+              mt: "9px",
+            }}
+          >
+            {/* Title & Divider */}
+            <ListItem button>
+              <ListItemIcon sx={{ color: "blue" }}>{<HomeIcon />}</ListItemIcon>
+              <ListItemText primary="Innovus" />
+            </ListItem>
+
+            <Divider />
+            <List sx={{ width: 250 }}>
+              {navItems.map((item) => (
+                <ListItem
+                  button
+                  key={item.id}
+                  onClick={() => handleScroll(item.id)}
+                >
+                  <ListItemIcon sx={{ color: "blue" }}>
+                    {item.icon}
+                  </ListItemIcon>
+                  <ListItemText primary={item.name} />
+                </ListItem>
+              ))}
+            </List>
+
+            {/* <Box
+              sx={{
+                p: 10,
+                position: "absolute",
+                bottom: 10,
+                left: 10,
+                width: "40px",
+                height: "40px",
+                backgroundColor: "red",
+              }}
+            >
+              <IconButton>
+                <CoffeeIcon fontSize="large" />
+              </IconButton>
+            </Box> */}
+          </Box>
         </Drawer>
       </Box>
 
@@ -176,6 +227,26 @@ const MainSitePage = () => {
       <Contact />
       <Services />
       <Footer />
+      <FloatingWhatsApp
+        phoneNumber="+13054970754"
+        accountName="Dagmar"
+        allowClickAway="true"
+      />
+
+      {/* <Fab
+        color="success"
+        aria-label="whatsapp"
+        sx={{
+          position: "fixed",
+          bottom: 32,
+          right: 32,
+          zIndex: 1000,
+          boxShadow: 3,
+          animation: `${jump} 1.5s ease-in-out infinite`,
+        }}
+      >
+        <WhatsAppIcon />
+      </Fab> */}
     </Box>
   );
 };

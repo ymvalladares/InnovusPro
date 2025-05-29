@@ -12,8 +12,10 @@ import {
   ListItemButton,
   Box,
   Link,
+  Divider,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
+import CoffeeIcon from "@mui/icons-material/Coffee";
 import HomeIcon from "@mui/icons-material/Home";
 import BuildIcon from "@mui/icons-material/Build";
 import ContactPhoneIcon from "@mui/icons-material/ContactPhone";
@@ -142,32 +144,55 @@ const Navbar = () => {
       </AppBar>
       ;{/* Drawer */}
       <Drawer anchor="left" open={drawerOpen} onClose={toggleDrawer(false)}>
-        <List sx={{ width: 250 }}>
-          <ListItem button>
-            <ListItemIcon>
-              <HomeIcon />
-            </ListItemIcon>
-            <ListItemText primary="Home" />
-          </ListItem>
-          <ListItem button>
-            <ListItemIcon>
-              <BuildIcon />
-            </ListItemIcon>
-            <ListItemText primary="Services" />
-          </ListItem>
-          <ListItem button>
-            <ListItemIcon>
-              <ContactPhoneIcon />
-            </ListItemIcon>
-            <ListItemText primary="Contact" />
-          </ListItem>
-          <ListItem button>
-            <ListItemIcon>
-              <InfoIcon />
-            </ListItemIcon>
-            <ListItemText primary="About" />
-          </ListItem>
-        </List>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            height: "100%",
+            width: 250,
+          }}
+        >
+          {/* Title and Divider at the Top */}
+          <Typography variant="h6" sx={{ p: 2 }}>
+            Menu
+          </Typography>
+          <Divider />
+
+          {/* List Items */}
+          <List sx={{ flexGrow: 1 }}>
+            <ListItem button>
+              <ListItemIcon>
+                <HomeIcon />
+              </ListItemIcon>
+              <ListItemText primary="Home" />
+            </ListItem>
+            <ListItem button>
+              <ListItemIcon>
+                <BuildIcon />
+              </ListItemIcon>
+              <ListItemText primary="Services" />
+            </ListItem>
+            <ListItem button>
+              <ListItemIcon>
+                <ContactPhoneIcon />
+              </ListItemIcon>
+              <ListItemText primary="Contact" />
+            </ListItem>
+            <ListItem button>
+              <ListItemIcon>
+                <InfoIcon />
+              </ListItemIcon>
+              <ListItemText primary="About" />
+            </ListItem>
+          </List>
+
+          {/* Coffee Icon Fixed at Bottom Left */}
+          <Box sx={{ p: 2, position: "absolute", bottom: 10, left: 10 }}>
+            <IconButton>
+              <CoffeeIcon fontSize="large" />
+            </IconButton>
+          </Box>
+        </Box>
       </Drawer>
     </Box>
   );

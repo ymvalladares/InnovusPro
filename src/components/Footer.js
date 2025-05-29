@@ -174,15 +174,19 @@ const Footer = () => {
         <Divider sx={{ p: 2 }} />
 
         <Box
-          container
           sx={{
-            display: "flex",
+            display: { xs: "block", sm: "flex" },
             justifyContent: "space-between",
-            alignItems: "center",
-            pt: 2,
+            p: 2,
+            ml: { xs: 10, sm: 0 },
           }}
         >
-          <Typography variant="body2" color="textSecondary" fontWeight="bold">
+          <Typography
+            m={1}
+            variant="body2"
+            color="textSecondary"
+            fontWeight="bold"
+          >
             © Copyright 2025 - MyOwn
           </Typography>
           <Box>
