@@ -1,16 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.1f8b3d2c.css",
-    "main.js": "/static/js/main.1d6a7281.js",
+    "main.js": "/static/js/main.391550d6.js",
     "static/js/453.ea512af9.chunk.js": "/static/js/453.ea512af9.chunk.js",
     "static/media/fondo.jpg": "/static/media/fondo.a24a0fbf3ffad8ee25ce.jpg",
+    "static/media/LogoInnovus.jpeg": "/static/media/LogoInnovus.6220f912bf497a09041b.jpeg",
     "index.html": "/index.html",
     "main.1f8b3d2c.css.map": "/static/css/main.1f8b3d2c.css.map",
-    "main.1d6a7281.js.map": "/static/js/main.1d6a7281.js.map",
+    "main.391550d6.js.map": "/static/js/main.391550d6.js.map",
     "453.ea512af9.chunk.js.map": "/static/js/453.ea512af9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1f8b3d2c.css",
-    "static/js/main.1d6a7281.js"
+    "static/js/main.391550d6.js"
   ]
 }
