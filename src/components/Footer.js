@@ -92,7 +92,7 @@ const Footer = () => {
     <Box sx={{ bgcolor: "#FAFAFA", py: 4 }} mt={7}>
       <Container>
         <Grid container spacing={10}>
-          <Grid size={{ xs: 12, md: 8 }}>
+          <Grid size={{ xs: 12, md: 7 }}>
             <Typography variant="h6" fontWeight="bold">
               "Transform Your Home, Elevate Your Lifestyle—Because You Deserve a
               Space That Inspires, Comforts, and Reflects Your Vision!"
@@ -126,7 +126,7 @@ const Footer = () => {
             </Box>
           </Grid>
 
-          <Grid size={{ xs: 12, md: 4 }}>
+          <Grid size={{ xs: 12, md: 5 }}>
             <Box>
               <Box
                 sx={{
@@ -138,7 +138,7 @@ const Footer = () => {
               >
                 <OutlineMarkEmailRead color="blue" width="30px" />
                 <Typography variant="body1" fontWeight="bold">
-                  Email: support@gmail.com
+                  Email: innovuscarpentryremodeling@gmail.com
                 </Typography>
               </Box>
               <Box

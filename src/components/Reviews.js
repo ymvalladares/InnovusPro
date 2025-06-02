@@ -32,19 +32,19 @@ const reviews = [
     icon: <Messages color="blue" width="50px" />,
     name: "John Doe",
     job: "Chief Executive",
-    text: "I have used CleanPro service for about four years. I describe myself very picky and difficult to be pleased. Exceeded my expectations.",
+    text: "Absolutely impressed with the craftsmanship!. Their attention to detail and professionalism exceeded all expectations. Highly recommended!",
   },
   {
     icon: <Messages color="blue" width="50px" />,
     name: "Robert Henrich",
     job: "CEO, HK Traders",
-    text: "I have used CleanPro service for about four years. I describe myself very picky and difficult to be pleased. Exceeded my expectations.",
+    text: "Reliable, responsive, and top-quality work!. They communicated clearly, stuck to the timeline, and delivered amazing woodwork for our home office.",
   },
   {
     icon: <Messages color="blue" width="50px" />,
-    name: "Robert Henrich",
-    job: "CEO, HK Traders",
-    text: "I have used CleanPro service for about four years. I describe myself very picky and difficult to be pleased. Exceeded my expectations.",
+    name: "Leonardo Gamon",
+    job: "CEO, Skyline Realty",
+    text: "Custom woodwork that adds real character to our home. The design was flawless, and the finish speaks of true craftsmanship. Will definitely work with them again!",
   },
 ];
 

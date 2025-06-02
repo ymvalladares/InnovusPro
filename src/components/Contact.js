@@ -1,21 +1,6 @@
 import React from "react";
-import {
-  Box,
-  Typography,
-  TextField,
-  Button,
-  Link,
-  Container,
-  Grid,
-  Card,
-  CardContent,
-  FormControl,
-  InputLabel,
-  Select,
-  MenuItem,
-} from "@mui/material";
-import { useState } from "react";
-import useMediaQuery from "@mui/material/useMediaQuery";
+import { Box, Typography, Container, Grid, Card } from "@mui/material";
+import FormContacts from "../Helpers/FormContacts";
 
 export function OutlineMarkEmailRead(props) {
   return (
@@ -51,83 +36,56 @@ export function Location2(props) {
 }
 
 const Contact = () => {
-  const mobileDevice = useMediaQuery("(min-width:500px)");
-
-  const [find_us, setFind_us] = useState("");
-
-  const handleChange = (event) => {
-    setFind_us(event.target.value);
-  };
-
   return (
-    <Container sx={{ height: mobileDevice ? "740px" : "1300px" }} id="contact">
-      <Box
-        sx={{
-          padding: { xs: 2, sm: 2 },
-          mx: "auto",
-          textAlign: "center",
-        }}
-      >
-        <Typography variant="h6" color="error" fontWeight="bold">
+    <Container sx={{ py: { xs: 6, md: 8 } }} id="contact">
+      <Box sx={{ textAlign: "center", mb: 4 }}>
+        <Typography variant="h6" color="#0000FF" fontWeight="bold">
           Here To Help
         </Typography>
         <Typography variant="h4" sx={{ mb: 2 }} fontWeight="bold">
           Contact Us
         </Typography>
-        <Typography variant="body1" sx={{ mb: 4 }}>
+        <Typography variant="body1">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque
           enim risus lorem diam. Viverra egestas penatibus feugiat vitae in
           dignissim.
         </Typography>
       </Box>
-      <Grid container spacing={10} height="500px">
-        <Grid size={{ xs: 12, md: 6 }}>
-          <Box height="60%">
-            <Box
-              sx={{
-                mt: 3,
-                display: "flex",
-                alignItems: "center", // centra verticalmente
-                gap: 4.0,
-              }}
-            >
+
+      <Grid container spacing={10} alignItems="stretch">
+        {/* Left Side */}
+        <Grid size={{ xs: 12, md: 6 }} sx={{ display: "flex" }} mt={4}>
+          <Box
+            sx={{ flex: 1, display: "flex", flexDirection: "column", gap: 3 }}
+          >
+            {/* Contact Info */}
+            <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
               <OutlineMarkEmailRead color="blue" width="30px" />
               <Typography variant="body1" fontWeight="bold">
-                Email: support@gmail.com
+                Email: innovuscarpentryremodeling@gmail.com
               </Typography>
             </Box>
-            <Box
-              sx={{
-                mt: 3,
-                display: "flex",
-                alignItems: "center", // centra verticalmente
-                gap: 4.0,
-              }}
-            >
+            <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
               <BaselineLocalPhone color="blue" width="30px" />
               <Typography variant="body1" fontWeight="bold">
                 Phone: 904 852 3178
               </Typography>
             </Box>
-            <Box
-              sx={{
-                mt: 3,
-                display: "flex",
-                alignItems: "center", // centra verticalmente
-                gap: 4.0,
-              }}
-            >
+            <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
               <Location2 color="blue" width="30px" />
               <Typography variant="body1" fontWeight="bold">
                 103 Newton Rd, West Park, FL 33023
               </Typography>
             </Box>
+
+            {/* Google Map */}
             <Card
               sx={{
                 borderRadius: 3,
                 background: "#fafafa",
-                marginTop: "35px",
-                height: "100%",
+                flexGrow: 1,
+                mt: 3,
+                overflow: "hidden",
               }}
               elevation={0}
             >
@@ -135,84 +93,17 @@ const Contact = () => {
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3586.6943763231598!2d-80.20664252480924!3d25.9780618772166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9aeba28625be1%3A0xe5894de048733b8f!2s103%20Newton%20Rd%2C%20West%20Park%2C%20FL%2033023!5e0!3m2!1ses-419!2sus!4v1748451460357!5m2!1ses-419!2sus"
                 width="100%"
                 height="100%"
+                style={{ border: "0" }}
                 allowFullScreen=""
-                style={{ border: "none" }}
                 loading="lazy"
               ></iframe>
             </Card>
           </Box>
         </Grid>
-        <Grid size={{ xs: 12, md: 6 }} mt={mobileDevice ? 0 : 4}>
-          <Box
-            component="form"
-            noValidate
-            autoComplete="off"
-            sx={{
-              p: 2,
-              display: "flex",
-              flexDirection: "column",
-              gap: 3,
-            }}
-          >
-            <TextField
-              required
-              label="Name"
-              variant="standard"
-              fullWidth
-              placeholder="John/Jane Doe"
-              focused
-            />
-            <TextField
-              required
-              label="Email"
-              type="email"
-              variant="standard"
-              fullWidth
-              placeholder="name@company.com"
-              focused
-            />
-            <TextField
-              required
-              label="Phone"
-              type="tel"
-              variant="standard"
-              fullWidth
-              placeholder="+1 (206) 987-6543"
-              focused
-            />
-            <FormControl required fullWidth focused variant="standard">
-              <InputLabel id="demo-simple-select-standard-label">
-                How Did You Find Us
-              </InputLabel>
-              <Select
-                labelId="demo-simple-select-standard-label"
-                id="demo-simple-select-standard"
-                value={find_us}
-                onChange={handleChange}
-                label="Find_US"
-              >
-                <MenuItem value="">
-                  <em>None</em>
-                </MenuItem>
-                <MenuItem value={10}>Friends</MenuItem>
-                <MenuItem value={20}>Our WebSite</MenuItem>
-                <MenuItem value={30}>Marketplace</MenuItem>
-              </Select>
-            </FormControl>
-            <TextField
-              required
-              label="Message"
-              variant="outlined"
-              fullWidth
-              multiline
-              rows={4}
-              focused
-              placeholder="Hello, I’m interested in..."
-            />
-            <Button variant="contained" color="primary" size="large">
-              Submit Message Now
-            </Button>
-          </Box>
+
+        {/* Right Side */}
+        <Grid size={{ xs: 12, md: 6 }} sx={{ display: "flex" }}>
+          <FormContacts />
         </Grid>
       </Grid>
     </Container>

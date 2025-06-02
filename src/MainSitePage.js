@@ -10,7 +10,6 @@ import {
   ListItemIcon,
   ListItemText,
   Button,
-  ListItemButton,
   Box,
   Link,
   Divider,
@@ -21,42 +20,26 @@ import BuildIcon from "@mui/icons-material/Build";
 import ContactPhoneIcon from "@mui/icons-material/ContactPhone";
 import InfoIcon from "@mui/icons-material/Info";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
-import useMediaQuery from "@mui/material/useMediaQuery";
+import logo from "./photos/LogoInnovus.jpeg";
 
 //-------Components---------
-import Navbar from "./components/Navbar";
 import Services from "./components/Services";
 import Header from "./components/Header";
-import InformationSmall from "./components/InformationSmall";
 import Reviews from "./components/Reviews";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
 import { FloatingWhatsApp } from "react-floating-whatsapp";
-import { Fab } from "@mui/material";
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-import { keyframes } from "@emotion/react";
-import CoffeeIcon from "@mui/icons-material/Coffee";
-
-const jump = keyframes`
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-8px);
-  }
-`;
+import WorkPictures from "./components/WorkPictures";
 
 const navItems = [
   { name: "Home", id: "header", icon: <HomeIcon /> },
   { name: "Services", id: "services", icon: <BuildIcon /> },
-  { name: "Contacts", id: "contact", icon: <ContactPhoneIcon /> },
   { name: "Reviews", id: "reviews", icon: <InfoIcon /> },
+  { name: "Contacts", id: "contact", icon: <ContactPhoneIcon /> },
 ];
 
 const MainSitePage = () => {
-  const matches = useMediaQuery("(min-width:500px)");
-
   const handleScroll = (item) => {
     const el = document.getElementById(`${item}`);
     if (el) el.scrollIntoView({ behavior: "smooth" });
@@ -79,31 +62,51 @@ const MainSitePage = () => {
             border: "none",
           }}
         >
-          <Toolbar sx={{ marginLeft: "10px" }}>
-            <IconButton
-              edge="start"
-              color="inherit"
-              onClick={toggleDrawer(true)}
-              sx={{
-                display: { xs: "block", sm: "none" },
-                color: "black",
-                marginTop: "5px",
-              }}
-            >
-              <MenuIcon />
-            </IconButton>
-            <Typography
-              variant="h6"
-              sx={{
-                flexGrow: 1,
-                display: { xs: "none", sm: "block", md: "block", lg: "block" },
-                color: "#3BC798",
-                fontWeight: "bold",
-                marginLeft: "50px",
-              }}
-            >
-              Innovus Services
-            </Typography>
+          <Toolbar
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              flexWrap: "wrap",
+              px: { xs: 2, sm: 4 },
+            }}
+          >
+            <Box sx={{ display: "flex", alignItems: "center" }}>
+              <IconButton
+                edge="start"
+                color="inherit"
+                onClick={toggleDrawer(true)}
+                sx={{
+                  display: { xs: "block", sm: "none" },
+                  color: "black",
+                  mr: 1,
+                  mt: 1,
+                }}
+              >
+                <MenuIcon />
+              </IconButton>
+              <Box
+                component="img"
+                src={logo} // <-- replace with your logo path
+                alt="Innovus Logo"
+                sx={{
+                  height: 40,
+                  width: 40,
+                  mr: 2,
+                  display: { xs: "none", sm: "block" },
+                }}
+              ></Box>
+              <Typography
+                variant="h6"
+                sx={{
+                  display: { xs: "none", sm: "block" },
+                  color: "#5B76CD",
+                  fontWeight: "bold",
+                }}
+              >
+                Innovus Carpentry
+              </Typography>
+            </Box>
             <List
               sx={{
                 display: "flex",
@@ -123,48 +126,54 @@ const MainSitePage = () => {
                   key={item.id}
                   disablePadding
                 >
-                  <ListItemButton
-                    sx={{ textAlign: "center", cursor: "pointer" }}
+                  <Link
                     onClick={() => handleScroll(item.id)}
+                    underline="none"
+                    sx={{
+                      display: "block",
+                      textAlign: "center",
+                      cursor: "pointer",
+                      py: 1,
+                      px: 2,
+                      color: "#5B76CD",
+                      fontWeight: "bold",
+                      borderRadius: 1,
+                      "&:hover": {
+                        textDecoration: "underline",
+                      },
+                    }}
                   >
-                    <ListItemText
-                      sx={{ color: "#3BC798", fontWeight: "bold" }}
-                      primary={item.name}
-                    />
-                  </ListItemButton>
+                    {item.name}
+                  </Link>
                 </ListItem>
               ))}
             </List>
             <Button
+              component="a"
+              href="tel:+13054970754"
               sx={{
-                marginRight: matches ? "50px" : "0px",
-                marginLeft: matches ? "80px" : "170px",
+                // mt: { xs: 1, sm: 0 },
                 color: "white",
                 fontWeight: "bold",
                 textTransform: "none",
                 backgroundColor: "#5B76CD",
                 borderRadius: "10px",
                 boxShadow: "0 4px 24px 0 #0004",
-                paddingLeft: "20px",
-                paddingRight: "20px",
-
+                px: 2.5,
+                py: 1,
+                display: "flex",
+                alignItems: "center",
                 ":hover": {
                   color: "#5B76CD",
                   backgroundColor: "white",
                   textDecoration: "underline",
                   border: "1px solid #5B76CD",
-                  paddingLeft: "20px",
-                  paddingRight: "20px",
-                  fontWeight: "bold",
-                  borderRadius: "10px",
                 },
               }}
               variant="outlined"
             >
-              <LocalPhoneIcon sx={{ mr: 2 }} />
-              <Link color="inherit" href="tel:+13054970754">
-                +1 305 497 0754
-              </Link>
+              <LocalPhoneIcon sx={{ mr: 1 }} />
+              +1 305 497 0754
             </Button>
           </Toolbar>
         </AppBar>
@@ -176,12 +185,23 @@ const MainSitePage = () => {
               flexDirection: "column",
               height: "100%",
               width: 250,
-              mt: "9px",
+              mt: "8px",
             }}
           >
             {/* Title & Divider */}
             <ListItem button>
-              <ListItemIcon sx={{ color: "blue" }}>{<HomeIcon />}</ListItemIcon>
+              <ListItemIcon sx={{ color: "blue", marginLeft: "15px" }}>
+                <Box
+                  component="img"
+                  src={logo} // <-- replace with your logo path
+                  alt="Innovus Logo"
+                  sx={{
+                    height: 32,
+                    width: 32,
+                    mr: 1,
+                  }}
+                ></Box>
+              </ListItemIcon>
               <ListItemText primary="Innovus" />
             </ListItem>
 
@@ -225,7 +245,7 @@ const MainSitePage = () => {
       <Services />
       <Reviews />
       <Contact />
-      <Services />
+      <WorkPictures />
       <Footer />
       <FloatingWhatsApp
         phoneNumber="+13054970754"
