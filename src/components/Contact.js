@@ -68,7 +68,7 @@ const Contact = () => {
             <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
               <BaselineLocalPhone color="blue" width="30px" />
               <Typography variant="body1" fontWeight="bold">
-                Phone: 904 852 3178
+                Phone: +1 305 497 0754
               </Typography>
             </Box>
             <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>

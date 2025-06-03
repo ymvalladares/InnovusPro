@@ -252,21 +252,6 @@ const MainSitePage = () => {
         accountName="Dagmar"
         allowClickAway="true"
       />
-
-      {/* <Fab
-        color="success"
-        aria-label="whatsapp"
-        sx={{
-          position: "fixed",
-          bottom: 32,
-          right: 32,
-          zIndex: 1000,
-          boxShadow: 3,
-          animation: `${jump} 1.5s ease-in-out infinite`,
-        }}
-      >
-        <WhatsAppIcon />
-      </Fab> */}
     </Box>
   );
 };

@@ -8,7 +8,6 @@ import {
   SvgIcon,
   Container,
 } from "@mui/material";
-import WorkspacePremiumIcon from "@mui/icons-material/WorkspacePremium";
 
 // SVG icons as React components
 function AwardIcon(props) {

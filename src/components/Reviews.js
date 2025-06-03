@@ -5,7 +5,6 @@ import {
   Box,
   Card,
   CardContent,
-  Avatar,
   useTheme,
   Grid,
 } from "@mui/material";
