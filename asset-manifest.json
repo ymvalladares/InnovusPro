@@ -1,17 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.1f8b3d2c.css",
-    "main.js": "/static/js/main.da5e7454.js",
+    "main.css": "/static/css/main.b161565f.css",
+    "main.js": "/static/js/main.a1e59823.js",
     "static/js/453.ea512af9.chunk.js": "/static/js/453.ea512af9.chunk.js",
+    "static/media/imag6.jpeg": "/static/media/imag6.5bc76e590aa48602adc4.jpeg",
     "static/media/fondo.jpg": "/static/media/fondo.a24a0fbf3ffad8ee25ce.jpg",
+    "static/media/imag1.jpeg": "/static/media/imag1.07487bd3642734cd6746.jpeg",
+    "static/media/imag5.jpeg": "/static/media/imag5.1d844d9e0251670378c1.jpeg",
+    "static/media/imag3.jpeg": "/static/media/imag3.598309bb21f991cdd8e9.jpeg",
+    "static/media/imag4.jpeg": "/static/media/imag4.4006c01faa16c8c9dbb8.jpeg",
+    "static/media/imag2.jpeg": "/static/media/imag2.1f1b4804e0c8177e82b3.jpeg",
     "static/media/LogoInnovus.jpeg": "/static/media/LogoInnovus.6220f912bf497a09041b.jpeg",
     "index.html": "/index.html",
-    "main.1f8b3d2c.css.map": "/static/css/main.1f8b3d2c.css.map",
-    "main.da5e7454.js.map": "/static/js/main.da5e7454.js.map",
+    "main.b161565f.css.map": "/static/css/main.b161565f.css.map",
+    "main.a1e59823.js.map": "/static/js/main.a1e59823.js.map",
     "453.ea512af9.chunk.js.map": "/static/js/453.ea512af9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1f8b3d2c.css",
-    "static/js/main.da5e7454.js"
+    "static/css/main.b161565f.css",
+    "static/js/main.a1e59823.js"
   ]
 }
