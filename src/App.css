@@ -8,3 +8,24 @@
 .react-floating-whatsapp__chatbox textarea {
   font-size: 16px;
 }
+
+.image-gallery-image {
+  border-radius: 16px;
+}
+.image-gallery-thumbnail img {
+  border-radius: 8px;
+  overflow: hidden;
+}
+.image-gallery-thumbnail:hover {
+  border: none !important;
+  outline: none !important;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* efecto elegante */
+  border-radius: 8px;
+}
+
+.image-gallery-thumbnail.active {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid #007bff; /* o cualquier color que prefieras */
+  box-sizing: border-box;
+}

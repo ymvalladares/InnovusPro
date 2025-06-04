@@ -243,9 +243,9 @@ const MainSitePage = () => {
       {/* --------- Others components ----------- */}
       <Header />
       <Services />
+      <WorkPictures />
       <Reviews />
       <Contact />
-      <WorkPictures />
       <Footer />
       <FloatingWhatsApp
         phoneNumber="+13054970754"

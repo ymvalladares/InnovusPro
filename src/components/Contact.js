@@ -74,7 +74,7 @@ const Contact = () => {
             <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
               <Location2 color="blue" width="30px" />
               <Typography variant="body1" fontWeight="bold">
-                103 Newton Rd, West Park, FL 33023
+                3661 sw 58 ave 33023 west park, Fl, 33023{" "}
               </Typography>
             </Box>
 
@@ -90,7 +90,7 @@ const Contact = () => {
               elevation={0}
             >
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3586.6943763231598!2d-80.20664252480924!3d25.9780618772166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9aeba28625be1%3A0xe5894de048733b8f!2s103%20Newton%20Rd%2C%20West%20Park%2C%20FL%2033023!5e0!3m2!1ses-419!2sus!4v1748451460357!5m2!1ses-419!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3586.7363432831457!2d-80.20410552480931!3d25.976685977217407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9aebba9c15ba7%3A0x641d970915ecba28!2s3661%20SW%2058th%20Ave%2C%20West%20Park%2C%20FL%2033023!5e0!3m2!1ses-419!2sus!4v1749059478328!5m2!1ses-419!2sus"
                 width="100%"
                 height="100%"
                 style={{ border: "0" }}

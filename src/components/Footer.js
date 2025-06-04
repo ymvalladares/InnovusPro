@@ -103,13 +103,25 @@ const Footer = () => {
                 justifyContent: "center",
               }}
             >
-              <IconButton aria-label="fingerprint" color="primary">
+              <IconButton
+                href="https://www.facebook.com/share/1DsV1DgPVT/?mibextid=wwXIfr"
+                aria-label="fingerprint"
+                color="primary"
+              >
                 <FacebookCircleLine width="28px" color="blue" />
               </IconButton>
-              <IconButton aria-label="fingerprint" color="primary">
+              <IconButton
+                href="https://www.instagram.com/INNOVUS_CARPENTRY"
+                aria-label="fingerprint"
+                color="primary"
+              >
                 <InstagramSolid color="blue" width="32px" />
               </IconButton>
-              <IconButton aria-label="fingerprint" color="primary">
+              <IconButton
+                href="https://www.tiktok.com/@innovus_carpentry?_t=ZT-8wvjafNSOK6&_r=1"
+                aria-label="fingerprint"
+                color="primary"
+              >
                 <Tiktok color="blue" width="28px" />
               </IconButton>
 
@@ -161,7 +173,7 @@ const Footer = () => {
               >
                 <Location2 color="blue" width="30px" />
                 <Typography variant="body1" fontWeight="bold">
-                  103 Newton Rd, West Park, FL 33023
+                  3661 sw 58 ave 33023 west park, Florida, 33023{" "}
                 </Typography>
               </Box>
             </Box>
