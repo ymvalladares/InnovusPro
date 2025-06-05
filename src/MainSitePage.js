@@ -19,6 +19,7 @@ import HomeIcon from "@mui/icons-material/Home";
 import BuildIcon from "@mui/icons-material/Build";
 import ContactPhoneIcon from "@mui/icons-material/ContactPhone";
 import InfoIcon from "@mui/icons-material/Info";
+import CollectionsIcon from "@mui/icons-material/Collections";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import logo from "./photos/LogoInnovus.jpeg";
 
@@ -35,6 +36,7 @@ import WorkPictures from "./components/WorkPictures";
 const navItems = [
   { name: "Home", id: "header", icon: <HomeIcon /> },
   { name: "Services", id: "services", icon: <BuildIcon /> },
+  { name: "Gallery", id: "gallery", icon: <CollectionsIcon /> },
   { name: "Reviews", id: "reviews", icon: <InfoIcon /> },
   { name: "Contacts", id: "contact", icon: <ContactPhoneIcon /> },
 ];

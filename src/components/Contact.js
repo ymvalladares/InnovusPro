@@ -46,9 +46,9 @@ const Contact = () => {
           Contact Us
         </Typography>
         <Typography variant="body1">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque
-          enim risus lorem diam. Viverra egestas penatibus feugiat vitae in
-          dignissim.
+          Looking for custom woodwork, home renovations, or quality
+          craftsmanship? Innovus Carpentry is your trusted partner for tailored
+          carpentry solutions in Miami, Florida.
         </Typography>
       </Box>
 

@@ -173,7 +173,7 @@ const Footer = () => {
               >
                 <Location2 color="blue" width="30px" />
                 <Typography variant="body1" fontWeight="bold">
-                  3661 sw 58 ave 33023 west park, Florida, 33023{" "}
+                  3661 sw 58 ave 33023 west park, Miami, Florida
                 </Typography>
               </Box>
             </Box>

@@ -20,32 +20,38 @@ const images = [
   {
     original: Img2,
     thumbnail: Img2,
+    alt: "Custom carpentry appliances in Miami",
   },
   {
     original: Img1,
     thumbnail: Img1,
+    alt: "Custom carpentry appliances in Miami",
   },
   {
     original: Img3,
     thumbnail: Img3,
+    alt: "Custom carpentry appliances in Miami",
   },
   {
     original: Img4,
     thumbnail: Img4,
+    alt: "Custom carpentry appliances in Miami",
   },
   {
     original: Img5,
     thumbnail: Img5,
+    alt: "Custom carpentry appliances in Miami",
   },
   {
     original: Img6,
     thumbnail: Img6,
+    alt: "Custom carpentry appliances in Miami",
   },
 ];
 
 const WorkPictures = () => {
   return (
-    <Container>
+    <Container id="gallery">
       <Box
         mt={7}
         sx={{
@@ -97,8 +103,8 @@ const WorkPictures = () => {
                 needs of the people who live in it. That’s why we’re dedicated
                 to delivering{" "}
                 <span style={{ color: "#5B76CD", fontWeight: "bold" }}>
-                  custom woodwork and full renovations
-                </span>
+                  custom woodwork and full renovations in Miami, Florida
+                </span>{" "}
                 that are not only beautiful, but functional and built to last.
                 <br />
               </Typography>

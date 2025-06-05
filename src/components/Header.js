@@ -49,7 +49,6 @@ const Header = () => {
       >
         <Stack spacing={4} alignItems="center">
           <Typography
-            fontWeight="bold"
             variant={mobileDevice ? "h3" : "h4"}
             gutterBottom
             sx={{
@@ -58,8 +57,9 @@ const Header = () => {
               letterSpacing: 1,
             }}
           >
-            Welcome to Your Local Carpentry Experts
+            Custom Carpentry Services in Miami, Florida
           </Typography>
+
           <Typography
             variant="body1"
             sx={{
@@ -71,8 +71,8 @@ const Header = () => {
               maxWidth: 700,
             }}
           >
-            We bring years of experience, precision, and dedication to every
-            project—big or small. Modern appliances complement our custom
+            We bring years of carpentry experience, precision, and dedication to
+            every project—big or small. Modern appliances complement our custom
             cabinetry and woodwork, giving your space a clean, cohesive look.
             Updated appliances combined with quality craftsmanship can
             significantly boost your property’s resale value.
