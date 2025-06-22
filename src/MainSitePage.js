@@ -97,7 +97,7 @@ const MainSitePage = () => {
                   mr: 2,
                   display: { xs: "none", sm: "block" },
                 }}
-              ></Box>
+              />
               <Typography
                 variant="h6"
                 sx={{
@@ -150,6 +150,17 @@ const MainSitePage = () => {
                 </ListItem>
               ))}
             </List>
+            <Box
+              component="img"
+              src={logo} // <-- replace with your logo path
+              alt="Innovus Logo"
+              sx={{
+                height: 90,
+                width: 90,
+                mr: 2,
+                display: { xs: "block", sm: "none" },
+              }}
+            />
             <Button
               component="a"
               href="tel:+13054970754"
@@ -163,7 +174,7 @@ const MainSitePage = () => {
                 boxShadow: "0 4px 24px 0 #0004",
                 px: 2.5,
                 py: 1,
-                display: "flex",
+                display: { xs: "none", md: "flex" },
                 alignItems: "center",
                 ":hover": {
                   color: "#5B76CD",
@@ -204,7 +215,7 @@ const MainSitePage = () => {
                   }}
                 ></Box>
               </ListItemIcon>
-              <ListItemText primary="Innovus" />
+              <ListItemText primary="Innovus Carpentry" />
             </ListItem>
 
             <Divider />
@@ -223,21 +234,42 @@ const MainSitePage = () => {
               ))}
             </List>
 
-            {/* <Box
+            <Box
               sx={{
-                p: 10,
                 position: "absolute",
-                bottom: 10,
+                bottom: 35,
                 left: 10,
-                width: "40px",
-                height: "40px",
-                backgroundColor: "red",
+                width: "90%",
               }}
             >
-              <IconButton>
-                <CoffeeIcon fontSize="large" />
-              </IconButton>
-            </Box> */}
+              <Button
+                component="a"
+                href="tel:+13054970754"
+                sx={{
+                  // mt: { xs: 1, sm: 0 },
+                  color: "white",
+                  fontWeight: "bold",
+                  textTransform: "none",
+                  backgroundColor: "#5B76CD",
+                  borderRadius: "10px",
+                  boxShadow: "0 4px 24px 0 #0004",
+                  px: 2.5,
+                  py: 1,
+                  display: "flex",
+                  alignItems: "center",
+                  ":hover": {
+                    color: "#5B76CD",
+                    backgroundColor: "white",
+                    textDecoration: "underline",
+                    border: "1px solid #5B76CD",
+                  },
+                }}
+                variant="outlined"
+              >
+                <LocalPhoneIcon sx={{ mr: 1 }} />
+                +1 305 497 0754
+              </Button>
+            </Box>
           </Box>
         </Drawer>
       </Box>
@@ -253,6 +285,7 @@ const MainSitePage = () => {
         phoneNumber="+13054970754"
         accountName="Dagmar"
         allowClickAway="true"
+        avatar="	https://avatars.githubusercontent.com/u/103406224"
       />
     </Box>
   );

@@ -85,6 +85,9 @@ export function FacebookCircleLine(props) {
 }
 
 const Footer = () => {
+  const redirecTo = () => {
+    window.open("http://abbsium.com");
+  };
   return (
     <Box sx={{ bgcolor: "#FAFAFA", py: 4 }} mt={7}>
       <Container>
@@ -195,8 +198,10 @@ const Footer = () => {
             variant="body2"
             color="textSecondary"
             fontWeight="bold"
+            sx={{ cursor: "pointer" }}
+            onClick={redirecTo}
           >
-            © Copyright 2025 - MyOwn
+            © Copyright 2025 - Abbsium
           </Typography>
           <Box>
             <Link

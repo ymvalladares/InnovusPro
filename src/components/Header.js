@@ -88,6 +88,7 @@ const Header = () => {
           >
             <Button
               color="primary"
+              href="tel:+13054970754"
               sx={{
                 px: 3,
                 textTransform: "none",
@@ -108,6 +109,7 @@ const Header = () => {
             </Button>
             <Button
               color="primary"
+              href="tel:+13054970754"
               sx={{
                 px: 3,
                 textTransform: "none",

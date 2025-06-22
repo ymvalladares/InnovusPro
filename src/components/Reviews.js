@@ -8,6 +8,7 @@ import {
   useTheme,
   Grid,
 } from "@mui/material";
+import GoogleReviewsWidget from "google-reviews-widget";
 
 export function Messages(props) {
   return (
@@ -77,7 +78,10 @@ const Reviews = () => {
       </Box>
       <Box mb={5} sx={{ width: "100%" }}>
         <Container>
-          <Grid container spacing={6}>
+          <Box sx={{ mt: 3 }}>
+            <GoogleReviewsWidget instanceId="D1OduNB0uy0leoC8l1Il" />
+          </Box>
+          {/* <Grid container spacing={6}>
             {reviews.map((card, idx) => (
               <Grid size={{ xs: 12, md: 4 }} key={idx}>
                 <Card
@@ -116,7 +120,7 @@ const Reviews = () => {
                 </Card>
               </Grid>
             ))}
-          </Grid>
+          </Grid> */}
         </Container>
       </Box>
     </Container>

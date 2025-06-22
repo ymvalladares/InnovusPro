@@ -39,8 +39,8 @@ const Contact = () => {
   return (
     <Container sx={{ py: { xs: 6, md: 8 } }} id="contact">
       <Box sx={{ textAlign: "center", mb: 4 }}>
-        <Typography variant="h6" color="#0000FF" fontWeight="bold">
-          Here To Help
+        <Typography fontWeight="bold" variant="subtitle1" color="primary">
+          Testimonials
         </Typography>
         <Typography variant="h4" sx={{ mb: 2 }} fontWeight="bold">
           Contact Us
