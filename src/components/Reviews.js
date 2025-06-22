@@ -67,21 +67,21 @@ const Reviews = () => {
             Testimonials
           </Typography>
           <Typography variant="h4" fontWeight="bold">
-            Trusted by Thousands of People & Companies
+            What the Clients Say About Innovus Carpentry and Remodeling
           </Typography>
           <Typography variant="body1" sx={{ marginY: 2 }}>
-            At Stitch Cleaning Service, let us help you solve problems so that
-            you can focus on your mission. We support businesses through periods
-            of expansion, succession.
+            At Innovus Carpentry and Remodeling LLC, we take pride in turning
+            our clients’ visions into reality with expert craftsmanship and
+            personalized service. Here's what our satisfied customers are saying
+            about their experience with us.
           </Typography>
         </Box>
       </Box>
       <Box mb={5} sx={{ width: "100%" }}>
-        <Container>
-          <Box sx={{ mt: 3 }}>
-            <GoogleReviewsWidget instanceId="D1OduNB0uy0leoC8l1Il" />
-          </Box>
-          {/* <Grid container spacing={6}>
+        <Box sx={{ mt: 3, pl: 3, pr: 3 }}>
+          <GoogleReviewsWidget instanceId="D1OduNB0uy0leoC8l1Il" />
+        </Box>
+        {/* <Grid container spacing={6}>
             {reviews.map((card, idx) => (
               <Grid size={{ xs: 12, md: 4 }} key={idx}>
                 <Card
@@ -121,7 +121,6 @@ const Reviews = () => {
               </Grid>
             ))}
           </Grid> */}
-        </Container>
       </Box>
     </Container>
   );

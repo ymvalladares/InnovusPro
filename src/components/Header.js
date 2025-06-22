@@ -23,6 +23,7 @@ const Header = () => {
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
+      id="header"
     >
       {/* Overlay de opacidad */}
       <Box
